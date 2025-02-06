@@ -17,7 +17,8 @@ class MainActivity : AppCompatActivity() {
 
         // Set button click listeners
         btnEmotionMatch.setOnClickListener {
-            // TODO: Open Emotion Matching Activity
+            val intent = Intent(this, EmotionMatchActivity::class.java)
+            startActivity(intent)
         }
 
         btnCopingGames.setOnClickListener {
