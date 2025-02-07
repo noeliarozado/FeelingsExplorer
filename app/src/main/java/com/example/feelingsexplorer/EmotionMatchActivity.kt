@@ -19,7 +19,7 @@ class EmotionMatchActivity : AppCompatActivity() {
         Pair("😡", "Angry")
     )
 
-    private var currentEmotion = emotions[0]
+    private var currentEmotion = emotions.random()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,8 +53,16 @@ class EmotionMatchActivity : AppCompatActivity() {
     private fun checkAnswer(selectedAnswer: String) {
         if (selectedAnswer == currentEmotion.second) {
             txtResult.text = "✅ Correct! Great job!"
+
+            // Wait 1 second and load a new emotion
+            txtResult.postDelayed({
+                currentEmotion = emotions.random()
+                setEmotion()
+            }, 1000)
+
         } else {
             txtResult.text = "❌ Try again!"
         }
     }
+
 }
