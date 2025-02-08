@@ -16,7 +16,14 @@ class EmotionMatchActivity : AppCompatActivity() {
     private val emotions = listOf(
         Pair("😊", "Happy"),
         Pair("😢", "Sad"),
-        Pair("😡", "Angry")
+        Pair("😡", "Angry"),
+        Pair("😱", "Surprised"),
+        Pair("😐", "Neutral"),
+        Pair("😨", "Scared"),
+        Pair("😍", "Loving"),
+        Pair("😖", "Frustrated"),
+        Pair("😎", "Confident"),
+        Pair("🤢", "Disgusted")
     )
 
     private var currentEmotion = emotions.random()
