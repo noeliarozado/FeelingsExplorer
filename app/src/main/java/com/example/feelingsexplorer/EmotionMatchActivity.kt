@@ -1,5 +1,6 @@
 package com.example.feelingsexplorer
 
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -12,6 +13,8 @@ class EmotionMatchActivity : AppCompatActivity() {
     private lateinit var btnOption1: Button
     private lateinit var btnOption2: Button
     private lateinit var btnOption3: Button
+    private lateinit var txtScore: TextView
+    private var score = 0
 
     private val emotions = listOf(
         Pair("😊", "Happy"),
@@ -37,6 +40,7 @@ class EmotionMatchActivity : AppCompatActivity() {
         btnOption1 = findViewById(R.id.btnOption1)
         btnOption2 = findViewById(R.id.btnOption2)
         btnOption3 = findViewById(R.id.btnOption3)
+        txtScore = findViewById(R.id.txtScore)
 
         // Set the first emotion
         setEmotion()
@@ -53,22 +57,38 @@ class EmotionMatchActivity : AppCompatActivity() {
     }
 
     private fun setEmotion() {
+        // Pick a new random emotion as the correct one
+        currentEmotion = emotions.random()
         txtEmotion.text = currentEmotion.first
         txtResult.text = "" // Clear result text
+
+        // Pick two incorrect options (excluding the correct one)
+        val incorrectOptions = emotions.filter { it.second != currentEmotion.second }.shuffled().take(2)
+
+        // Combine correct and incorrect answers, then shuffle
+        val answerOptions = (incorrectOptions + currentEmotion).shuffled()
+
+        btnOption1.text = answerOptions[0].second
+        btnOption2.text = answerOptions[1].second
+        btnOption3.text = answerOptions[2].second
     }
 
     private fun checkAnswer(selectedAnswer: String) {
         if (selectedAnswer == currentEmotion.second) {
-            txtResult.text = "✅ Correct! Great job!"
+            score++
+            txtResult.text = "✅ Correct! Score: $score"
+            txtResult.setTextColor(Color.GREEN)
 
-            // Wait 1 second and load a new emotion
+            txtScore.text = "Score: $score"
+
+            // Wait 1 second, then load a new emotion
             txtResult.postDelayed({
-                currentEmotion = emotions.random()
                 setEmotion()
             }, 1000)
 
         } else {
             txtResult.text = "❌ Try again!"
+            txtResult.setTextColor(Color.RED)
         }
     }
 
