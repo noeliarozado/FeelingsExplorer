@@ -12,12 +12,18 @@ class MainActivity : AppCompatActivity() {
 
         // Buttons
         val btnEmotionMatch = findViewById<Button>(R.id.btnEmotionMatch)
+        val btnEmotionRegulation = findViewById<Button>(R.id.btnEmotionRegulation)
         val btnCopingGames = findViewById<Button>(R.id.btnCopingGames)
         val btnStoryMode = findViewById<Button>(R.id.btnStoryMode)
 
         // Set button click listeners
         btnEmotionMatch.setOnClickListener {
             val intent = Intent(this, EmotionMatchActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnEmotionRegulation.setOnClickListener {
+            val intent = Intent(this, EmotionTipsActivity::class.java)
             startActivity(intent)
         }
 
