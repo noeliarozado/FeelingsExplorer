@@ -34,7 +34,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnCopingGames.setOnClickListener {
-            // TODO: Open Coping Strategies Activity
+            val intent = Intent(this, CopingStrategiesActivity::class.java)
+            startActivity(intent)
         }
 
         btnStoryMode.setOnClickListener {
