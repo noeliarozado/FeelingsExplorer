@@ -39,7 +39,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnStoryMode.setOnClickListener {
-            // TODO: Open Story Mode Activity
+            val intent = Intent(this, StoryActivity::class.java)
+            startActivity(intent)
         }
     }
 }

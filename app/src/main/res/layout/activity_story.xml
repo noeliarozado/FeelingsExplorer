@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#FFF3E0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/txtStory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textColor="#333"
+            android:textStyle="italic"
+            android:padding="16dp"
+            android:lineSpacingExtra="8dp" />
+
+        <Button
+            android:id="@+id/btnNextStory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next Story"
+            android:textSize="18sp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnBackToMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back to Menu"
+            android:textSize="16sp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#FF8A65"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</ScrollView>
