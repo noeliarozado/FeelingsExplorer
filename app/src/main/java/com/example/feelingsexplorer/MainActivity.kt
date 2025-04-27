@@ -1,20 +1,21 @@
 package com.example.feelingsexplorer
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         // Buttons
         val btnEmotionMatch = findViewById<Button>(R.id.btnEmotionMatch)
-        val btnEmotionRegulation = findViewById<Button>(R.id.btnEmotionRegulation)
+        val btnCopingTips = findViewById<Button>(R.id.btnCopingTips)
         val btnParentsGuide = findViewById<Button>(R.id.btnParentsGuide)
-        val btnCopingGames = findViewById<Button>(R.id.btnCopingGames)
         val btnStoryMode = findViewById<Button>(R.id.btnStoryMode)
 
         // Set button click listeners
@@ -23,18 +24,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        btnEmotionRegulation.setOnClickListener {
-            val intent = Intent(this, EmotionTipsActivity::class.java)
+        btnCopingTips.setOnClickListener {
+            val intent = Intent(this, CopingAndEmotionTipsActivity::class.java)
             startActivity(intent)
         }
 
         btnParentsGuide.setOnClickListener {
             val intent = Intent(this, ParentsGuideActivity::class.java)
-            startActivity(intent)
-        }
-
-        btnCopingGames.setOnClickListener {
-            val intent = Intent(this, CopingStrategiesActivity::class.java)
             startActivity(intent)
         }
 

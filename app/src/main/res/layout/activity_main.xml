@@ -24,10 +24,10 @@
         android:textSize="18sp"/>
 
     <Button
-        android:id="@+id/btnEmotionRegulation"
+        android:id="@+id/btnCopingTips"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="Emotion Regulation Tips"
+        android:text="Coping Tips"
         android:textSize="18sp"/>
 
     <Button
@@ -36,14 +36,6 @@
         android:layout_height="wrap_content"
         android:text="Parents Guide"
         android:textSize="18sp"/>
-
-    <Button
-        android:id="@+id/btnCopingGames"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="Try Coping Games"
-        android:textSize="18sp"
-        android:layout_marginTop="10dp"/>
 
     <Button
         android:id="@+id/btnStoryMode"
