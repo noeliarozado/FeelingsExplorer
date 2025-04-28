@@ -2,6 +2,8 @@ package com.example.feelingsexplorer
 
 import android.graphics.Color
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -17,16 +19,16 @@ class EmotionMatchActivity : AppCompatActivity() {
     private var score = 0
 
     private val emotions = listOf(
-        Pair("😊", "Happy"),
-        Pair("😢", "Sad"),
-        Pair("😡", "Angry"),
-        Pair("😱", "Surprised"),
-        Pair("😐", "Neutral"),
-        Pair("😨", "Scared"),
-        Pair("😍", "Loving"),
-        Pair("😖", "Frustrated"),
-        Pair("😎", "Confident"),
-        Pair("🤢", "Disgusted")
+        "😊" to "Happy",
+        "😢" to "Sad",
+        "😡" to "Angry",
+        "😱" to "Surprised",
+        "😐" to "Neutral",
+        "😨" to "Scared",
+        "😍" to "Loving",
+        "😖" to "Frustrated",
+        "😎" to "Confident",
+        "🤢" to "Disgusted"
     )
 
     private var currentEmotion = emotions.random()
@@ -42,54 +44,45 @@ class EmotionMatchActivity : AppCompatActivity() {
         btnOption3 = findViewById(R.id.btnOption3)
         txtScore = findViewById(R.id.txtScore)
 
-        // Set the first emotion
+        findViewById<Button>(R.id.btnBack).setOnClickListener { finish() }
+
         setEmotion()
 
-        // Set button click listeners
-        btnOption1.setOnClickListener { checkAnswer(btnOption1.text.toString()) }
-        btnOption2.setOnClickListener { checkAnswer(btnOption2.text.toString()) }
-        btnOption3.setOnClickListener { checkAnswer(btnOption3.text.toString()) }
-
-        val btnBack = findViewById<Button>(R.id.btnBack)
-        btnBack.setOnClickListener {
-            finish()
+        val optionButtons = listOf(btnOption1, btnOption2, btnOption3)
+        optionButtons.forEach { button ->
+            button.setOnClickListener { checkAnswer(button.text.toString()) }
         }
     }
 
     private fun setEmotion() {
-        // Pick a new random emotion as the correct one
         currentEmotion = emotions.random()
         txtEmotion.text = currentEmotion.first
-        txtResult.text = "" // Clear result text
+        txtResult.text = ""
 
-        // Pick two incorrect options (excluding the correct one)
-        val incorrectOptions = emotions.filter { it.second != currentEmotion.second }.shuffled().take(2)
-
-        // Combine correct and incorrect answers, then shuffle
-        val answerOptions = (incorrectOptions + currentEmotion).shuffled()
-
-        btnOption1.text = answerOptions[0].second
-        btnOption2.text = answerOptions[1].second
-        btnOption3.text = answerOptions[2].second
+        val options = (emotions - currentEmotion).shuffled().take(2) + currentEmotion
+        options.shuffled().forEachIndexed { index, pair ->
+            when (index) {
+                0 -> btnOption1.text = pair.second
+                1 -> btnOption2.text = pair.second
+                2 -> btnOption3.text = pair.second
+            }
+        }
     }
 
     private fun checkAnswer(selectedAnswer: String) {
         if (selectedAnswer == currentEmotion.second) {
             score++
             txtResult.text = "✅ Correct! Score: $score"
-            txtResult.setTextColor(Color.GREEN)
-
+            txtResult.setTextColor(Color.parseColor("#4CAF50"))
             txtScore.text = "Score: $score"
 
-            // Wait 1 second, then load a new emotion
-            txtResult.postDelayed({
+            Handler(Looper.getMainLooper()).postDelayed({
                 setEmotion()
-            }, 1000)
+            }, 800)
 
         } else {
             txtResult.text = "❌ Try again!"
-            txtResult.setTextColor(Color.RED)
+            txtResult.setTextColor(Color.parseColor("#F44336"))
         }
     }
-
 }
