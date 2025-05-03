@@ -10,37 +10,42 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:theme="@style/AppTheme"
         tools:targetApi="31">
-        <activity
-            android:name=".CopingAndEmotionTipsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".StoryActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CopingStrategiesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ParentsGuideActivity"
-            android:exported="false" />
-        <activity
-            android:name=".EmotionTipsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".EmotionMatchActivity"
-            android:exported="false" />
+
+        <!-- Apply AppTheme to the MainActivity as it is the launch activity -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Apply AppTheme to all other activities -->
+        <activity
+            android:name=".TipsActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".StoryActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".ParentsGuideActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".EmotionMatchActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+
     </application>
 
 </manifest>

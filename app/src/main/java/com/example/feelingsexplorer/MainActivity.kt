@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.material3.TimePicker
 
 class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -14,18 +15,17 @@ class MainActivity : AppCompatActivity() {
 
         // Buttons
         val btnEmotionMatch = findViewById<Button>(R.id.btnEmotionMatch)
-        val btnCopingTips = findViewById<Button>(R.id.btnCopingTips)
         val btnParentsGuide = findViewById<Button>(R.id.btnParentsGuide)
         val btnStoryMode = findViewById<Button>(R.id.btnStoryMode)
+        val btnTips = findViewById<Button>(R.id.btnTips)
 
-        // Set button click listeners
         btnEmotionMatch.setOnClickListener {
             val intent = Intent(this, EmotionMatchActivity::class.java)
             startActivity(intent)
         }
 
-        btnCopingTips.setOnClickListener {
-            val intent = Intent(this, CopingAndEmotionTipsActivity::class.java)
+        btnTips.setOnClickListener {
+            val intent = Intent(this, TipsActivity::class.java)
             startActivity(intent)
         }
 
@@ -38,5 +38,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, StoryActivity::class.java)
             startActivity(intent)
         }
+
     }
 }
