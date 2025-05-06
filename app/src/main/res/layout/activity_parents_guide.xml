@@ -1,58 +1,132 @@
-<ScrollView
-xmlns:android="http://schemas.android.com/apk/res/android"
-android:layout_width="match_parent"
-android:layout_height="match_parent">
-
-<LinearLayout
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_height="match_parent"
+    android:background="@color/light_background"
+    android:padding="24dp">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Parent's Guide to Emotion Regulation"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:paddingBottom="16dp"/>
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingBottom="32dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="👨‍👩‍👦 1. Help your child name their emotions. \n Encourage them to say 'I'm
-            feeling sad' instead of just crying."
-        android:textSize="16sp"
-        android:paddingBottom="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Parent's Guide to Emotion Regulation"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryText"
+            android:gravity="center"
+            android:paddingBottom="24dp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="🧘‍♂️ 2. Teach deep breathing. \n Help your child practice slow breathing
-            when they are upset."
-        android:textSize="16sp"
-        android:paddingBottom="8dp"/>
+        <!-- Tip 1 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="👨‍👩‍👦 Help Name Emotions"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryText"
+            android:gravity="center"
+            android:paddingBottom="4dp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="🤝 3. Model calm behavior. \n Kids learn by watching! Stay calm when
-            solving problems."
-        android:textSize="16sp"
-        android:paddingBottom="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Encourage your child to say 'I'm feeling sad' instead of just crying."
+            android:textSize="16sp"
+            android:textColor="@color/primaryText"
+            android:gravity="center"
+            android:paddingBottom="16dp" />
 
-    <Button
-        android:id="@+id/btnBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        android:backgroundTint="@color/teal_700"
-        android:textColor="@android:color/white"
-        android:layout_margin="16dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"/>
+        <!-- Tip 2 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🧘‍♂️ Practice Deep Breathing"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryText"
+            android:gravity="center"
+            android:paddingBottom="4dp" />
 
-</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Help your child take slow breaths when upset — like blowing up a balloon."
+            android:textSize="16sp"
+            android:textColor="@color/primaryText"
+            android:gravity="center"
+            android:paddingBottom="16dp" />
 
+        <!-- Tip 3 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🤝 Model Calm Behavior"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryText"
+            android:gravity="center"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Children learn by example — show how you handle stress calmly."
+            android:textSize="16sp"
+            android:textColor="@color/primaryText"
+            android:gravity="center"
+            android:paddingBottom="16dp" />
+
+        <!-- Tip 4 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🗣️ Encourage Expressive Language"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryText"
+            android:gravity="center"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Use phrases like 'You look frustrated. Want to talk about it?'"
+            android:textSize="16sp"
+            android:textColor="@color/primaryText"
+            android:gravity="center"
+            android:paddingBottom="16dp" />
+
+        <!-- Tip 5 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎨 Use Creative Outlets"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryText"
+            android:gravity="center"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Encourage drawing, music, or storytelling to let emotions out safely."
+            android:textSize="16sp"
+            android:textColor="@color/primaryText"
+            android:gravity="center"
+            android:paddingBottom="24dp" />
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/SmallBackButton"
+            android:text="Back" />
+
+    </LinearLayout>
 </ScrollView>
