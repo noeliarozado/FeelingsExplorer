@@ -1,49 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:background="#FFEB3B">
+    android:background="@color/cozy_lavender"
+    android:padding="32dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome to!"
-        android:textSize="24sp"
-        android:textColor="#000"
-        android:padding="20dp"
-        android:textStyle="bold"/>
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
-    <Button
-        android:id="@+id/btnEmotionMatch"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="Play Emotion Match"
-        android:textSize="18sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to Feelings Explorer"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryText"
+            android:gravity="center"
+            android:paddingBottom="12dp" />
 
-    <Button
-        android:id="@+id/btnTips"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="Tips"
-        android:textSize="18sp"
-        android:layout_marginTop="10dp"/>
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:src="@drawable/logo"
+            android:contentDescription="Welcome image"
+            android:layout_marginBottom="24dp" />
 
-    <Button
-        android:id="@+id/btnParentsGuide"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="Parents Guide"
-        android:textSize="18sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Learn, play, and grow emotionally"
+            android:textSize="16sp"
+            android:textColor="@color/primaryText"
+            android:gravity="center"
+            android:paddingBottom="28dp" />
 
-    <Button
-        android:id="@+id/btnStoryMode"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="Explore Stories"
-        android:textSize="18sp"
-        android:layout_marginTop="10dp"/>
+        <Button
+            android:id="@+id/btnEmotionMatch"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="🎯 Play Emotion Match"
+            android:textSize="18sp"
+            android:textColor="@color/button_text"
+            android:backgroundTint="@color/cozy_mint"
+            android:background="@drawable/rounded_button"
+            android:layout_marginTop="8dp"
+            android:padding="14dp" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/btnTips"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="💡 Tips for Kids"
+            android:textSize="18sp"
+            android:textColor="@color/button_text"
+            android:backgroundTint="@color/cozy_pink"
+            android:background="@drawable/rounded_button"
+            android:layout_marginTop="12dp"
+            android:padding="14dp" />
+
+        <Button
+            android:id="@+id/btnParentsGuide"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="👨‍👩‍👧 Parents' Guide"
+            android:textSize="18sp"
+            android:textColor="@color/button_text"
+            android:backgroundTint="@color/cozy_orange"
+            android:background="@drawable/rounded_button"
+            android:layout_marginTop="12dp"
+            android:padding="14dp" />
+
+        <Button
+            android:id="@+id/btnStoryMode"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="📖 Explore Stories"
+            android:textSize="18sp"
+            android:textColor="@color/button_text"
+            android:backgroundTint="@color/cozy_blue"
+            android:background="@drawable/rounded_button"
+            android:layout_marginTop="12dp"
+            android:padding="14dp" />
+
+    </LinearLayout>
+</ScrollView>

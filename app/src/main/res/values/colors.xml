@@ -15,4 +15,7 @@
     <color name="cozy_lavender">#D1C4E9</color>
     <color name="cozy_mint">#B2DFDB</color>
     <color name="secondaryButton">#FF8A65</color>
+    <color name="cozy_orange">#FFE0B2</color>
+    <color name="cozy_blue">#BBDEFB</color>
+    <color name="cozy_peach">#FFD3B6</color>
 </resources>

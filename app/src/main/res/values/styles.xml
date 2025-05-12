@@ -35,7 +35,6 @@
     <style name="RoundedButton">
         <item name="android:layout_width">250dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:backgroundTint">@color/cozy_pink</item>
         <item name="android:background">@drawable/rounded_button</item>
         <item name="android:textColor">@color/button_text</item>
         <item name="android:textSize">16sp</item>
@@ -51,6 +50,19 @@
         <item name="android:textColor">@color/button_text</item>
         <item name="android:textSize">16sp</item>
         <item name="android:padding">12dp</item>
+    </style>
+
+    <!-- Buttons in Main -->
+    <style name="RoundedButtonMint" parent="RoundedButton">
+        <item name="android:backgroundTint">@color/cozy_mint</item>
+    </style>
+
+    <style name="RoundedButtonLavender" parent="RoundedButton">
+        <item name="android:backgroundTint">@color/cozy_lavender</item>
+    </style>
+
+    <style name="RoundedButtonPeach" parent="RoundedButton">
+        <item name="android:backgroundTint">@color/cozy_peach</item>
     </style>
 
 </resources>
