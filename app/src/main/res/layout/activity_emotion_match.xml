@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="24dp"
-    android:background="#FFFDE7">
+    android:background="@color/light_background">
 
     <TextView
         android:id="@+id/txtScore"
@@ -15,7 +15,7 @@
         android:text="Score: 0"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:textColor="#37474F"
+        android:textColor="@color/primaryText"
         android:layout_marginBottom="12dp"/>
 
     <TextView
@@ -32,22 +32,25 @@
         android:layout_height="wrap_content"
         android:text="What emotion is this?"
         android:textSize="24sp"
-        android:textColor="#37474F"
+        android:textColor="@color/primaryText"
         android:layout_marginBottom="24dp"/>
 
     <Button
         android:id="@+id/btnOption1"
         style="@style/CozyButton"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#BBDEFB" />
 
     <Button
         android:id="@+id/btnOption2"
         style="@style/CozyButton"
+        android:backgroundTint="@color/cozy_green"
         android:layout_marginTop="8dp"/>
 
     <Button
         android:id="@+id/btnOption3"
         style="@style/CozyButton"
+        android:backgroundTint="@color/cozy_lilac"
         android:layout_marginTop="8dp"/>
 
     <TextView
@@ -62,7 +65,14 @@
 
     <Button
         android:id="@+id/btnBack"
-        style="@style/SmallBackButton"
-        android:layout_marginTop="24dp"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textSize="16sp"
+        android:textColor="@color/button_text"
+        android:backgroundTint="@color/cozy_red"
+        android:padding="8dp"
+        android:layout_marginTop="24dp"
+        android:drawablePadding="8dp" />
 
 </LinearLayout>

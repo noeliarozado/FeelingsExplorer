@@ -3,7 +3,7 @@
 
     <!-- Base Theme -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/cozy_pink</item>
+        <item name="colorPrimary">@color/cozy_mint</item>
         <item name="colorPrimaryDark">@color/cozy_brown</item>
         <item name="colorAccent">@color/cozy_pink</item>
         <item name="android:windowBackground">@color/light_background</item>

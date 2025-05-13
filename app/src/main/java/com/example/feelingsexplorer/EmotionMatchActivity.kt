@@ -74,15 +74,15 @@ class EmotionMatchActivity : AppCompatActivity() {
             score++
             txtResult.text = "✅ Correct! Score: $score"
             txtResult.setTextColor(Color.parseColor("#4CAF50"))
-            txtScore.text = "Score: $score"
-
-            Handler(Looper.getMainLooper()).postDelayed({
-                setEmotion()
-            }, 800)
-
         } else {
-            txtResult.text = "❌ Try again!"
+            score--
+            txtResult.text = "❌ Try again! Score: $score"
             txtResult.setTextColor(Color.parseColor("#F44336"))
         }
+        txtScore.text = "Score: $score"
+
+        Handler(Looper.getMainLooper()).postDelayed({
+            setEmotion()
+        }, 800)
     }
 }

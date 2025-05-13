@@ -18,4 +18,7 @@
     <color name="cozy_orange">#FFE0B2</color>
     <color name="cozy_blue">#BBDEFB</color>
     <color name="cozy_peach">#FFD3B6</color>
+    <color name="cozy_green">#C8E6C9</color>
+    <color name="cozy_lilac">#E1BEE7</color>
+    <color name="cozy_red">#FFCDD2</color>
 </resources>
