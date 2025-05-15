@@ -30,15 +30,15 @@ class TipsActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btnDeepBreathing).setOnClickListener {
-            txtTips.text = "🌬️ Deep Breathing: Breathe in for 4 seconds, hold for 4, breathe out for 6 seconds."
+            txtTips.text = "🌬️ Deep breathing: Breathe in for 4 seconds, hold for 4, breathe out for 6 seconds."
         }
 
         findViewById<Button>(R.id.btnCountToTen).setOnClickListener {
-            txtTips.text = "🔢 Count to Ten: Slowly count from 1 to 10 to help your mind slow down."
+            txtTips.text = "🔢 Count to ten: Slowly count from 1 to 10 to help your mind slow down."
         }
 
         findViewById<Button>(R.id.btnHug).setOnClickListener {
-            txtTips.text = "🤗 Ask for a Hug: Hugs release feel-good hormones."
+            txtTips.text = "🤗 Ask for a hug: Hugs release feel-good hormones."
         }
 
         btnBack.setOnClickListener {
