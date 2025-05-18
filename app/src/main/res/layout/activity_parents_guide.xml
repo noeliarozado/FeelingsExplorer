@@ -26,7 +26,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="👨‍👩‍👦 Help Name Emotions"
+            android:text="👨‍👩‍👦 Help name emotions"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/primaryText"
@@ -46,7 +46,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="🧘‍♂️ Practice Deep Breathing"
+            android:text="🧘‍♂️ Practice deep breathing"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/primaryText"
@@ -66,7 +66,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="🤝 Model Calm Behavior"
+            android:text="🤝 Model calm behaviour"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/primaryText"
@@ -86,7 +86,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="🗣️ Encourage Expressive Language"
+            android:text="🗣️ Encourage expressive language"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/primaryText"
@@ -106,7 +106,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="🎨 Use Creative Outlets"
+            android:text="🎨 Use creative outlets"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/primaryText"
@@ -125,8 +125,15 @@
         <!-- Back Button -->
         <Button
             android:id="@+id/btnBack"
-            style="@style/SmallBackButton"
-            android:text="Back" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textSize="16sp"
+            android:textColor="@color/button_text"
+            android:backgroundTint="@color/cozy_red"
+            android:padding="8dp"
+            android:layout_marginTop="24dp"
+            android:drawablePadding="8dp" />
 
     </LinearLayout>
 </ScrollView>
