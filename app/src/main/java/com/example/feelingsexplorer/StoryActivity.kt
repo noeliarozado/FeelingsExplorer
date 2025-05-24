@@ -113,3 +113,4 @@ class StoryActivity : AppCompatActivity() {
         txtStory.text = content
     }
 }
+
